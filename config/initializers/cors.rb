@@ -14,9 +14,10 @@
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 #   end
 # end
-Rails.application.config.middleware.insert_before 0, Rack::Cors, debug: true, :logger => (-> { Rails.logger })  do
+# Rails.application.config.middleware.insert_before 0, Rack::Cors, debug: true, :logger => (-> { Rails.logger })  do
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "localhost.com"
+    origins "localhost:3000"
 
     resource "*",
       headers: :any,
