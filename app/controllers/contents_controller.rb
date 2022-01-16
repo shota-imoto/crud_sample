@@ -1,7 +1,8 @@
 class ContentsController < ApplicationController
 	def index
 		@contents = Content.all
-		render json: @contents.to_json
+		logger.info(@contents.last.image)
+		render json: @contents.map{ |c| {title: c.title, description: c.description, image: c.image.present? ? c.image.url : 'null'} }.to_json
 	end
 
 	def new

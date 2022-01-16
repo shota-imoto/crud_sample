@@ -81,6 +81,11 @@ GEM
     diff-lcs (1.5.0)
     diffy (3.4.0)
     erubi (1.10.0)
+    factory_bot (4.10.0)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.10.0)
+      factory_bot (~> 4.10.0)
+      railties (>= 3.0.0)
     ffi (1.15.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -186,6 +191,7 @@ DEPENDENCIES
   bootsnap
   carrierwave (~> 2.0)
   debug
+  factory_bot_rails (~> 4.10.0)
   mysql2
   puma (~> 5.0)
   rack-cors
